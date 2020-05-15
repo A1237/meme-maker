@@ -10,7 +10,7 @@ const Playground = () => (
       id="file"
       className="playground__inputfile"
     />
-    <label for="file" className="playground__input-label">
+    <label htmlFor="file" className="playground__input-label">
       choose file
       <span className="playground__logo-container">
         <Logo className="playground__logo" />

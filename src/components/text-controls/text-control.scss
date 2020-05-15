@@ -1,0 +1,16 @@
+.text-control {
+    font-size: 1.4rem;
+    flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__font-select {
+        outline: none;
+        width: 70%;
+        padding: 1.2rem 2rem;
+        border: 2px solid rgb(192, 44, 206);
+    }
+
+}
