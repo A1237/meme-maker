@@ -1,0 +1,45 @@
+$color-primary: rgba(165, 94, 234, 1);
+
+.playground {
+  flex-grow: 1;
+  background-color: orangered;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__input-label {
+    font-size: 3.25rem;
+    padding: 1.3rem 2.3rem;
+    font-weight: 700;
+    color: $color-primary;
+    background-color: #f1f1f1;
+
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &__inputfile:focus + &__input-label,
+  &__input-label:hover {
+    background-color: rgb(238, 239, 240);
+  }
+
+  &__logo-container {
+    margin-left: 1.2rem;
+  }
+
+  &__logo {
+    width: 3.2rem;
+    height: 3.2rem;
+    fill: $color-primary;
+  }
+}
