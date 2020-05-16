@@ -1,22 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./playground.scss";
-import { ReactComponent as Logo } from "../../assets/upload-solid.svg";
 
-const Playground = () => (
-  <div className="playground">
-    <input
-      type="file"
-      name="file"
-      id="file"
-      className="playground__inputfile"
-    />
-    <label htmlFor="file" className="playground__input-label">
-      choose file
-      <span className="playground__logo-container">
-        <Logo className="playground__logo" />
-      </span>
-    </label>
-  </div>
-);
+import Backdrop from "../backdrop/backdrop";
+import Modal from "../modal/modal";
+import SelectFile from "../selectfile/selectfile";
+
+import { GlobalContext } from "../../globalContext/globalContext";
+
+const Playground = () => {
+  const { modal } = useContext(GlobalContext);
+
+  return (
+    <div className={`playground ${modal ? "backdrop" : ""}`}>
+      {modal ? <Modal /> : <SelectFile />}
+    </div>
+  );
+};
 
 export default Playground;

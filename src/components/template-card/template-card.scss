@@ -1,0 +1,24 @@
+.template-card {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__img {
+    width: 100%;
+
+    flex-basis: 70%;
+  }
+
+  &-text {
+    background-color: #fff;
+    flex-basis: 10%;
+    padding: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
